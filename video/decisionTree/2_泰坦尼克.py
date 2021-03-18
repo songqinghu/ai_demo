@@ -20,7 +20,7 @@ print(x[x['Age'].isna()])
 x['Age'].fillna(x['Age'].mean(), inplace=True)
 print(x)
 # 2.3 分割数据集
-train_x, test_x, train_y, test_y = train_test_split(x, y)
+train_x, test_x, train_y, test_y = train_test_split(x, y, random_state=20)
 
 # 3.特征工程(字典特征抽取)
 # 特征中出现类别符号，需要进行one-hot编码处理(DictVectorizer)
